@@ -13,5 +13,13 @@ Item {
         source: "images/background_empty.png"
     }
 
-    // TODO: implement the StatusBar component
+    StatusBar {
+        anchors.left: mainDashboard.left
+        anchors.right: mainDashboard.right
+        anchors.leftMargin: 150
+        anchors.rightMargin: 150
+        height: 20
+        anchors.bottom: mainDashboard.bottom
+        anchors.bottomMargin: 25
+    }
 }
