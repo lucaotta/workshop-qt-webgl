@@ -11,6 +11,31 @@ Item {
         anchors.centerIn: mainDashboard
 
         source: "images/background_empty.png"
+
+        Image {
+            id: contagiri_back
+            source: "images/contagiri_back.png"
+            anchors.centerIn: parent
+
+            Image {
+                id: contagiri_top
+                source: "images/contagiri_top.png"
+                anchors.centerIn: parent
+
+                Image {
+                    id: ghiera_numeri
+                    source: "images/ghiera+numeri.png"
+                    anchors.centerIn: parent
+
+                    Image {
+                        id: centrale
+                        source: "images/centrale.png"
+                        anchors.centerIn: parent
+                    }
+                }
+            }
+        }
+
     }
 
     StatusBar {
