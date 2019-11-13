@@ -31,6 +31,14 @@ Item {
                         id: centrale
                         source: "images/centrale.png"
                         anchors.centerIn: parent
+
+                        Cruise {
+                            id: cruise
+                            anchors.centerIn: parent
+                            speed: control_unit.speed
+                            battery: control_unit.battery / 100.0
+                        }
+
                     }
                 }
             }

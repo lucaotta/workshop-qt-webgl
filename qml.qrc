@@ -19,5 +19,6 @@
         <file>images/R.png</file>
         <file>MainDashboard.qml</file>
         <file>StatusBar.qml</file>
+        <file>Cruise.qml</file>
     </qresource>
 </RCC>
