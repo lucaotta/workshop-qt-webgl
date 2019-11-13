@@ -1,4 +1,5 @@
 import QtQuick 2.11
+import QtGraphicalEffects 1.0
 
 Item {
     id: cruise
@@ -32,12 +33,44 @@ Item {
         color: "darkgrey"
     }
 
-    Text {
-        anchors.top: measure.bottom
-        anchors.topMargin: 10
+    Rectangle {
+        id: filler
+
+        anchors.fill: battery_mask
+
+        color: "black"
+        visible: false
+
+        Rectangle {
+            anchors.left: filler.left
+
+            color: (battery > 0.2) ? "#ff00ff00" : "#ffff0000"
+            height: filler.height
+            width: cruise.battery * parent.width
+        }
+
+        Image {
+            anchors.fill: parent
+
+            source: "images/batteria_vuota.png"
+        }
+    }
+
+    Image {
+        id: battery_mask
+
         anchors.horizontalCenter: cruise.horizontalCenter
-        text: (cruise.battery * 100).toFixed(0)  + "%"
-        color: "white"
-        font.pointSize: 30
+        anchors.top: measure.bottom
+        anchors.topMargin: 20
+
+        source: "images/batteria_maschera.png"
+        visible: false
+    }
+
+    OpacityMask {
+        anchors.fill: filler
+
+        source: filler
+        maskSource: battery_mask
     }
 }

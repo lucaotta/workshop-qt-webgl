@@ -20,5 +20,8 @@
         <file>MainDashboard.qml</file>
         <file>StatusBar.qml</file>
         <file>Cruise.qml</file>
+        <file>TripInfo.qml</file>
+        <file>Pie.qml</file>
+        <file>Prindle.qml</file>
     </qresource>
 </RCC>
